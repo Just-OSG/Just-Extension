@@ -18,6 +18,12 @@
       "activeTab",
       "storage"
    ],
+   "web_accessible_resources": [
+      {
+         "resources": ["src/fonts/DroidKufi-Regular.ttf", "src/fonts/DroidKufi-Bold.ttf"],
+         "matches": ["https://services.just.edu.jo/*"]
+      }
+   ],
    "host_permissions": [
       "https://services.just.edu.jo/*"
    ],
@@ -128,6 +134,15 @@
             "src/content/guidancePlanVisualizer.js"
          ],
          "run_at": "document_end"
+      },
+      {
+         "matches": [
+            "https://services.just.edu.jo/stuservices/Student/Reg/StudentInfo.aspx"
+         ],
+         "js": [
+            "src/content/fontFix.js"
+         ],
+         "run_at": "document_start"
       }
    ]
 }

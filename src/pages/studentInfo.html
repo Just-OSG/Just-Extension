@@ -263,6 +263,67 @@ a {
     animation: fadeIn 0.5s ease-out;
 }
 
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/DroidKufi-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/DroidKufi-Bold.ttf') format('truetype');
+}
+
+.export-row {
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+
+.export-btn {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 13px;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.export-btn-pdf {
+    background-color: var(--primary-color);
+}
+
+.export-btn-pdf:hover {
+    background-color: #1e65c0;
+}
+
+.export-status {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 8px;
+    padding: 6px;
+    border-radius: 5px;
+    display: none;
+}
+
+.export-status.success {
+    background-color: rgba(46, 164, 0, 0.2);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.export-status.error {
+    background-color: rgba(229, 57, 53, 0.2);
+    border: 1px solid #e53935;
+    color: #e53935;
+}
+
 /* No data state */
 .no-data-container {
     display: flex;
@@ -370,9 +431,15 @@ a {
                 <button id="refreshDataBtn" class="action-button primary-button">Refresh</button>
                 <button id="gpaCalculatorBtn" class="action-button secondary-button">Calculator</button>
             </div>
-            
+
+            <div class="export-row">
+                <button id="exportPdfBtn" class="export-btn export-btn-pdf">📄 Export PDF</button>
+            </div>
+
+            <div id="exportStatus" class="export-status"></div>
+
             <button id="viewCoursesBtn" class="view-courses-button">View All Courses</button>
-            
+
             <a href="https://services.just.edu.jo/stuservices/Student/Reg/StudentCard.aspx" target="_blank">
                 <button class="view-card-button">View Student Card</button>
             </a>
@@ -383,6 +450,9 @@ a {
         <a href="https://linktr.ee/ti03" target="_blank">Ti &copy; 2025</a>
     </footer>
     
+    <script src="../libs/jspdf.umd.min.js"></script>
+    <script src="../libs/xlsx.full.min.js"></script>
+    <script src="../libs/html2canvas.min.js"></script>
     <script src="studentInfo.js"></script>
 </body>
 </html>

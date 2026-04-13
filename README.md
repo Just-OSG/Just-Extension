@@ -9,7 +9,7 @@ Check our [youtube tutorial](https://www.youtube.com/watch?v=7kzTqBQONBo) to exp
 
 - **Auto Course Evaluation** - Automatically complete course evaluations
 - **Dark Theme** - Enable dark mode for comfortable browsing
-- **GPA Calculator** - Calculate your GPA quickly
+- **GPA Calculator & Predictor** - Calculate your GPA and predict future performance
 - **Registration Helper** - Assist with course registration
 - **Quick Links** - Fast access to frequently used pages
 - **Student Info Display** - Easy access to your student information
