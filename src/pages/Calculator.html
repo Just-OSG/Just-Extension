@@ -4,355 +4,485 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../styles/buttonsStyle.css" />
 
-<style>
-:root {
-    --primary-color: #1857a4;
-    --secondary-color: #2ea400;
-    --accent-color: #f5b70a;
-    --dark-bg: rgb(30, 35, 40);
-    --darker-bg: rgb(22, 26, 30);
-    --light-text: white;
-    --hover-color: rgb(24, 87, 164);
-    --card-bg: rgb(35, 42, 45);
-    --input-bg: rgb(50, 57, 60);
-    --box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
+    <style>
+        :root {
+            --primary-color: #1857a4;
+            --secondary-color: #2ea400;
+            --accent-color: #f5b70a;
+            --dark-bg: rgb(30, 35, 40);
+            --darker-bg: rgb(22, 26, 30);
+            --light-text: white;
+            --hover-color: rgb(24, 87, 164);
+            --card-bg: rgb(35, 42, 45);
+            --input-bg: rgb(50, 57, 60);
+            --box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
 
-::-webkit-scrollbar-track {
-  background-color: var(--darker-bg);
-  border-radius: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-  background: #3d4852;
-  border-radius: 10px;
-}
+        ::-webkit-scrollbar-track {
+            background-color: var(--darker-bg);
+            border-radius: 10px;
+        }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #4a5964; 
-}
+        ::-webkit-scrollbar-thumb {
+            background: #3d4852;
+            border-radius: 10px;
+        }
 
-body {
-    background-color: var(--dark-bg);
-    color: var(--light-text);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 280px;
-    height: 480px;
-    margin: 0;
-    padding: 0 0 30px 0;
-    overflow-x: hidden;
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a5964;
+        }
 
-h1 {
-    margin-top: 12px;
-    font-size: 20px;
-    text-align: center;
-    transition: color 0.3s ease;
-}
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 280px;
+            height: 480px;
+            margin: 0;
+            padding: 0 0 30px 0;
+            overflow-x: hidden;
+        }
 
-h1:hover {
-    color: var(--hover-color);
-}
+        h1 {
+            margin-top: 12px;
+            font-size: 20px;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
 
-button:hover {
-    background-color: var(--hover-color);
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow);
-}
+        h1:hover {
+            color: var(--hover-color);
+        }
 
-h3 {
-    margin: 6px 0;
-    font-size: 14px;
-    text-align: center;
-}
+        button:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: var(--darker-bg);
-    width: 100%;
-    height: 18px;
-    font-size: 11px;
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 8px;
-    z-index: 10;
-}
+        h3 {
+            margin: 6px 0;
+            font-size: 14px;
+            text-align: center;
+        }
 
-footer a {
-    text-decoration: none;
-    color: rgb(0, 183, 255);
-}
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: var(--darker-bg);
+            width: 100%;
+            height: 18px;
+            font-size: 11px;
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 8px;
+            z-index: 10;
+        }
 
-a {
-    text-decoration: none;
-    color: var(--light-text);
-}
+        footer a {
+            text-decoration: none;
+            color: rgb(0, 183, 255);
+        }
 
-.back-button {
-    width: 32px; 
-    height: 32px; 
-    font-size: 20px; 
-    position: fixed; 
-    top: 8px; 
-    left: 8px;
-    background-color: var(--darker-bg);
-    color: var(--light-text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border: none;
-}
+        a {
+            text-decoration: none;
+            color: var(--light-text);
+        }
 
-.back-button:hover {
-    transform: scale(1.1);
-    background-color: var(--primary-color);
-}
+        .back-button {
+            width: 32px;
+            height: 32px;
+            font-size: 20px;
+            position: fixed;
+            top: 8px;
+            left: 8px;
+            background-color: var(--darker-bg);
+            color: var(--light-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
 
-input[type="text"], select {
-    background-color: var(--input-bg);
-    color: var(--light-text);
-    border: 1px solid #455a64;
-    border-radius: 6px;
-    padding: 8px;
-    font-size: 12px;
-    margin: 4px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+        .back-button:hover {
+            transform: scale(1.1);
+            background-color: var(--primary-color);
+        }
 
-input[type="text"]:focus, select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(24, 87, 164, 0.2);
-    outline: none;
-}
+        input[type="text"],
+        select {
+            background-color: var(--input-bg);
+            color: var(--light-text);
+            border: 1px solid #455a64;
+            border-radius: 6px;
+            padding: 8px;
+            font-size: 12px;
+            margin: 4px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-select {
-    appearance: none;
-    padding-right: 20px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 6px center;
-    background-size: 10px;
-}
+        input[type="text"]:focus,
+        select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(24, 87, 164, 0.2);
+            outline: none;
+        }
 
-#addEntrie {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
+        select {
+            appearance: none;
+            padding-right: 20px;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 6px center;
+            background-size: 10px;
+        }
 
-#addEntrie:hover {
-    background-color: #38c700;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-}
+        #addEntrie {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 3px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-.gpa-card {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    padding: 12px;
-    margin: 12px auto;
-    max-width: 90%;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-}
+        #addEntrie:hover {
+            background-color: #38c700;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
 
-.gpa-value {
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 20px;
-    display: block;
-    margin-top: 4px;
-}
+        .gpa-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px auto;
+            max-width: 90%;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
 
-.gpa-label {
-    font-size: 14px;
-    color: #adb5bd;
-    margin-bottom: 4px;
-}
+        .gpa-value {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 20px;
+            display: block;
+            margin-top: 4px;
+        }
 
-#Entries {
-    max-height: 180px;
-    overflow-y: auto;
-    padding: 8px;
-    margin-top: 6px;
-}
+        .gpa-label {
+            font-size: 14px;
+            color: #adb5bd;
+            margin-bottom: 4px;
+        }
 
-#Entries > div {
-    background-color: var(--card-bg);
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.2s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        #Entries {
+            max-height: 180px;
+            overflow-y: auto;
+            padding: 8px;
+            margin-top: 6px;
+        }
 
-#Entries > div:hover {
-    transform: translateX(4px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
+        #Entries>div {
+            background-color: var(--card-bg);
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-.course-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
+        #Entries>div:hover {
+            transform: translateX(4px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
 
-.course-name {
-    font-weight: bold;
-    margin-bottom: 4px;
-    font-size: 13px;
-}
+        .course-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
 
-.course-detail {
-    font-size: 11px;
-    color: #adb5bd;
-}
+        .course-name {
+            font-weight: bold;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
 
-.delete-btn {
-    background-color: #e53935;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 4px 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 11px;
-    width: fit-content;
-}
+        .course-detail {
+            font-size: 11px;
+            color: #adb5bd;
+        }
 
-.delete-btn:hover {
-    background-color: #f44336;
-    transform: translateY(-1px);
-}
+        .delete-btn {
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 4px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 11px;
+            width: fit-content;
+        }
 
-/* Cumulative GPA section */
-.cumulative-section {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    padding: 12px;
-    margin: 12px auto;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    box-shadow: var(--box-shadow);
-}
+        .delete-btn:hover {
+            background-color: #f44336;
+            transform: translateY(-1px);
+        }
 
-.cumulative-input {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 4px;
-}
+        /* Cumulative GPA section */
+        .cumulative-section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px auto;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-shadow: var(--box-shadow);
+        }
 
-.cumulative-input label {
-    flex: 1;
-    text-align: left;
-    font-size: 12px;
-    color: #adb5bd;
-}
+        .cumulative-input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
 
-.cumulative-input input {
-    flex: 1;
-    max-width: 90px;
-    text-align: center;
-}
+        .cumulative-input label {
+            flex: 1;
+            text-align: left;
+            font-size: 12px;
+            color: #adb5bd;
+        }
 
-.toggle-section {
-    cursor: pointer;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #adb5bd;
-    transition: all 0.3s ease;
-    background-color: var(--darker-bg);
-    padding: 8px;
-    border-radius: 6px;
-    margin: 8px auto;
-    width: 90%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 12px;
-}
+        .cumulative-input input {
+            flex: 1;
+            max-width: 90px;
+            text-align: center;
+        }
 
-.toggle-section:hover {
-    color: var(--light-text);
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
+        .toggle-section {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+            transition: all 0.3s ease;
+            background-color: var(--darker-bg);
+            padding: 8px;
+            border-radius: 6px;
+            margin: 8px auto;
+            width: 90%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+        }
 
-.toggle-section i {
-    margin-left: 6px;
-}
+        .toggle-section:hover {
+            color: var(--light-text);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
 
-.hidden {
-    display: none;
-}
+        .toggle-section i {
+            margin-left: 6px;
+        }
 
-.add-course-form {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    padding: 12px;
-    margin: 12px auto;
-    max-width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--box-shadow);
-}
+        .hidden {
+            display: none;
+        }
 
-.empty-message {
-    text-align: center;
-    color: #adb5bd;
-    margin: 15px 0;
-    font-style: italic;
-    font-size: 12px;
-}
-</style>
+        .add-course-form {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px auto;
+            max-width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #adb5bd;
+            margin: 15px 0;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        /* Grade Predictor Styles */
+        .predictor-section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px auto;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .predictor-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .predictor-tab {
+            flex: 1;
+            padding: 8px 12px;
+            background-color: var(--darker-bg);
+            color: #adb5bd;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .predictor-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .predictor-tab:hover {
+            background-color: var(--hover-color);
+            color: white;
+        }
+
+        .predictor-tab-content {
+            display: none;
+        }
+
+        .predictor-tab-content.active {
+            display: block;
+        }
+
+        .predictor-input {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .predictor-input label {
+            font-size: 12px;
+            color: #adb5bd;
+            font-weight: 500;
+        }
+
+        .predictor-input input {
+            padding: 8px;
+            border: 1px solid #455a64;
+            border-radius: 6px;
+            background-color: var(--input-bg);
+            color: var(--light-text);
+            font-size: 12px;
+            transition: border-color 0.3s ease;
+        }
+
+        .predictor-input input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .predict-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 8px 0;
+            align-self: center;
+        }
+
+        .predict-btn:hover {
+            background-color: #38c700;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .prediction-result {
+            text-align: center;
+            padding: 12px;
+            background-color: var(--darker-bg);
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        .result-label {
+            font-size: 12px;
+            color: #adb5bd;
+            margin-bottom: 4px;
+        }
+
+        .result-value {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+        }
+
+        .grade-equivalent {
+            font-size: 11px;
+            color: #f5b70a;
+            margin-top: 4px;
+            font-style: italic;
+        }
+    </style>
 </head>
 
 <body>
     <a><button class="back-button" id="RegHelper2">&#x2190;</button></a>
- 
-    <a><h1>GPA Calculator</h1></a>
-    
+
+    <a>
+        <h1>GPA Calculator & Predictor</h1>
+    </a>
+
     <!-- Semester GPA Section -->
     <div class="gpa-card">
         <div class="gpa-label">Semester GPA</div>
         <span id="SGPA" class="gpa-value">0.00</span>
     </div>
-    
+
     <!-- Cumulative GPA Toggle -->
     <div class="toggle-section" id="cumulativeToggle">
         Show Cumulative GPA Calculator &#x2193;
     </div>
-    
+
     <!-- Cumulative GPA Section -->
     <div class="cumulative-section hidden" id="cumulativeSection">
         <div class="cumulative-input">
@@ -366,7 +496,55 @@ select {
         <div class="gpa-label">Cumulative GPA</div>
         <span id="CGPA" class="gpa-value">0.00</span>
     </div>
-    
+
+    <!-- Grade Predictor Toggle -->
+    <div class="toggle-section" id="predictorToggle">
+        Show Grade Predictor &#x2193;
+    </div>
+
+    <!-- Grade Predictor Section -->
+    <div class="predictor-section hidden" id="predictorSection">
+        <div class="predictor-tabs">
+            <button class="predictor-tab active" data-tab="final-gpa">Final GPA Predictor</button>
+            <button class="predictor-tab" data-tab="target-grade">Target Grade Calculator</button>
+        </div>
+
+        <!-- Final GPA Predictor Tab -->
+        <div class="predictor-tab-content active" id="final-gpa-tab">
+            <div class="predictor-input">
+                <label for="remainingHours">Remaining Credit Hours:</label>
+                <input type="number" id="remainingHours" placeholder="0" min="0">
+            </div>
+            <div class="predictor-input">
+                <label for="expectedGrade">Expected Average Grade (GPA):</label>
+                <input type="number" id="expectedGrade" placeholder="0.00" min="0" max="4.2" step="0.01">
+            </div>
+            <button id="predictFinalGPA" class="predict-btn">Predict Final GPA</button>
+            <div class="prediction-result" id="finalGPAResult">
+                <div class="result-label">Predicted Final GPA:</div>
+                <span id="predictedGPA" class="result-value">--</span>
+            </div>
+        </div>
+
+        <!-- Target Grade Calculator Tab -->
+        <div class="predictor-tab-content" id="target-grade-tab">
+            <div class="predictor-input">
+                <label for="targetGPA">Target Final GPA:</label>
+                <input type="number" id="targetGPA" placeholder="0.00" min="0" max="4.2" step="0.01">
+            </div>
+            <div class="predictor-input">
+                <label for="remainingHoursTarget">Remaining Credit Hours:</label>
+                <input type="number" id="remainingHoursTarget" placeholder="0" min="0">
+            </div>
+            <button id="calculateTargetGrade" class="predict-btn">Calculate Required Grade</button>
+            <div class="prediction-result" id="targetGradeResult">
+                <div class="result-label">Required Average GPA:</div>
+                <span id="requiredGrade" class="result-value">--</span>
+                <div class="grade-equivalent" id="gradeEquivalent">--</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Add Course Form -->
     <div class="add-course-form">
         <input type="text" id="CMarkName" placeholder="Course name">
@@ -380,16 +558,17 @@ select {
         <input type="text" id="mark" placeholder="Mark/Grade">
         <button id="addEntrie">+</button>
     </div>
-    
+
     <!-- Course Entries -->
     <div id="Entries">
         <div class="empty-message" id="emptyEntriesMessage">No courses added yet</div>
     </div>
-    
+
     <footer>
         <a href="https://linktr.ee/ti03" target="_blank">Ti &copy; 2025</a>
     </footer>
-    
+
     <script src="Calculator.js"></script>
 </body>
+
 </html>
